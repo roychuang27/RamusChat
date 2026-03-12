@@ -528,6 +528,7 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  animation: thinking-fade 1.5s ease-in-out infinite alternate;
 }
 
 .chat-thinking-label {

@@ -200,7 +200,7 @@ export default function Chat() {
     return (
         <div className="chat-app">
             {!connected && <DisconnectedOverlay retryCount={retryCount} nextRetryAt={nextRetryAt} firstDisconnectAt={firstDisconnectAt} onRetryNow={retryNow} />}
-            {clustering && <ClusteringLockOverlay clustering={clustering} elapsed={clusteringElapsed} />}
+            {clustering && <ClusteringLockOverlay elapsed={clusteringElapsed} />}
 
             <SessionSidebar
                 open={showSessions}

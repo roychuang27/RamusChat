@@ -60,54 +60,5 @@ npm run dev
 
 Frontend runs at `http://localhost:5173`. Open it in your browser.
 
-## Project Structure
-
-```
-RamusChat/
-├── backend/                    # Python Flask API server
-│   ├── app.py                 # Main Flask application with all API endpoints
-│   ├── ai.py                  # AI integration (Mistral chat + Gemini embeddings)
-│   ├── session.py             # Session tree management (create, delete, move)
-│   ├── memory.py              # Memory CRUD and semantic search
-│   ├── clustering.py          # Two-phase hierarchical clustering algorithm
-│   ├── snapshot.py            # Version control with snapshots
-│   ├── config.py              # Configuration constants
-│   ├── utils.py               # Utility functions
-│   ├── requirements.txt       # Python dependencies
-│   ├── .env.example          # Environment variable template
-│   └── data/                 # Per-session data (gitignored)
-│       └── sessions.json     # Session tree structure
-│       └── session_*.json    # Individual session message history
-│       └── snapshots/        # Version control snapshots
-│
-├── frontend/                   # React + Vite application
-│   ├── src/
-│   │   ├── main.jsx           # React entry point
-│   │   ├── api.js             # API client functions
-│   │   ├── Chat.jsx           # Main application component
-│   │   ├── Message.jsx        # Message rendering with markdown/LaTeX
-│   │   ├── styles.css         # App styles
-│   │   ├── hooks/             # Custom React hooks
-│   │   │   ├── useSSE.js      # Server-Sent Events subscription
-│   │   │   ├── useToast.js    # Toast notification management
-│   │   │   └── useElapsedTimer.js  # Timer for long-running operations
-│   │   ├── utils/             # Utility functions
-│   │   │   ├── format.js      # Date/time formatting
-│   │   │   └── markdown.jsx   # Markdown/LaTeX preprocessing
-│   │   └── components/        # Reusable UI components
-│   │       ├── SessionSidebar.jsx
-│   │       ├── ChatInput.jsx
-│   │       ├── MemoryPanel.jsx
-│   │       ├── VersionControlPanel.jsx
-│   │       ├── ClusteringResultModal.jsx
-│   │       └── ...            # Other components
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-│
-├── README.md                   # This file
-└── .gitignore
-```
-
 ## License
 MIT
